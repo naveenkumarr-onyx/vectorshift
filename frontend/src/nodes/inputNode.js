@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Handle, Position } from "reactflow";
-// hello
+
 export const InputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState(
     data?.inputName || id.replace("customInput-", "input_")
@@ -22,7 +22,8 @@ export const InputNode = ({ id, data }) => {
       style={{
         width: 200,
         height: 100,
-        border: "1px solid black",
+        border: "1px solid violet",
+        borderRadius: "5px",
         padding: "5px",
       }}
     >
@@ -38,7 +39,12 @@ export const InputNode = ({ id, data }) => {
       >
         <label>
           Name:
-          <input type="text" value={currName} onChange={handleNameChange} />
+          <input
+            type="text"
+            value={currName}
+            onChange={handleNameChange}
+            style={{ borderRadius: "5px", padding: "5px" }}
+          />
         </label>
         <label
           style={{
