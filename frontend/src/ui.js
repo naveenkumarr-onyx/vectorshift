@@ -12,6 +12,7 @@ import { OutputNode } from "./nodes/outputNode";
 import { TextNode } from "./nodes/textNode";
 
 import "reactflow/dist/style.css";
+import EdgesConnect from "./edgesConnect";
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };

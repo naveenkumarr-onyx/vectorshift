@@ -6,7 +6,7 @@ export const TextNode = ({ id, data }) => {
     <BaseNode
       id={id}
       data={data}
-      type="Input"
+      type="Text"
       handleNameChange={(e) => console.log(e.target.value)}
       handleTypeChange={(e) => console.log(e.target.value)}
       customFields={null}
