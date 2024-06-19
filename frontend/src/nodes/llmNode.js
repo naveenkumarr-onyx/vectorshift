@@ -4,14 +4,7 @@ import { Handle, Position } from "reactflow";
 
 export const LLMNode = ({ id, data }) => {
   return (
-    <div
-      style={{
-        width: 200,
-        height: 90,
-        border: "1px solid black",
-        padding: "5px",
-      }}
-    >
+    <div className="w-[200px] h-[90px] border-1 border-black p-[5px] ">
       <Handle
         type="target"
         position={Position.Left}
