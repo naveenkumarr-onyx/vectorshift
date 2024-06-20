@@ -30,7 +30,7 @@ const BaseNode = ({
         <span className="text-violet-800">{type}</span>
       </div>
       <div className="flex flex-col gap-[15px]">
-        <label>
+        <label className=" flex flex-col gap-2">
           Name:
           <input
             type="text"
