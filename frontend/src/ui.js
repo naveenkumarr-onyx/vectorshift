@@ -30,6 +30,41 @@ const selector = (state) => ({
   onEdgesChange: state.onEdgesChange,
   onConnect: state.onConnect,
 });
+const initialNodes = [
+  {
+    id: "1",
+    type: "inputNode",
+    data: {
+      inputName: "Input 1",
+      inputType: "Text",
+    },
+    position: {
+      x: 100,
+      y: 100,
+    },
+  },
+  {
+    id: "2",
+    type: "outputNode",
+    data: {
+      inputName: "Output 1",
+      inputType: "Text",
+    },
+    position: {
+      x: 400,
+      y: 100,
+    },
+  },
+];
+const initialEdges = [
+  {
+    id: "e1-2",
+    source: "1",
+    target: "2",
+    sourceHandle: "1-value",
+    targetHandle: "2-input",
+  },
+];
 
 export const PipelineUI = () => {
   const reactFlowWrapper = useRef(null);
@@ -44,41 +79,6 @@ export const PipelineUI = () => {
     onConnect,
   } = useStore(selector, shallow);
 
-  const initialNodes = [
-    {
-      id: "1",
-      type: "inputNode",
-      data: {
-        inputName: "Input 1",
-        inputType: "Text",
-      },
-      position: {
-        x: 100,
-        y: 100,
-      },
-    },
-    {
-      id: "2",
-      type: "outputNode",
-      data: {
-        inputName: "Output 1",
-        inputType: "Text",
-      },
-      position: {
-        x: 400,
-        y: 100,
-      },
-    },
-  ];
-  const initialEdges = [
-    {
-      id: "e1-2",
-      source: "1",
-      target: "2",
-      sourceHandle: "1-value",
-      targetHandle: "2-input",
-    },
-  ];
   const getInitNodeData = (nodeID, type) => {
     let nodeData = { id: nodeID, nodeType: `${type}` };
     return nodeData;
